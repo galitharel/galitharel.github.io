@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The I Love Method™ — Transform Your Beliefs</title>
+  <meta name="description" content="A 30-day somatic journey that helps you build emotional safety, train the feeling, and create transformation that your mind and body can finally hold.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg: #050505;
+      --ivory: #F4EFE7;
+      --ivory-dim: #C8BFB6;
+      --gold: #C9A84F;
+      --gold-border: rgba(201,168,79,0.45);
+      --card: rgba(18,15,10,0.72);
+      --text-sec: #8B8275;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      background-image: url('bokeh.png');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+      color: var(--ivory);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.52);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(5,4,2,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201,168,79,0.15);
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-brand {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    section { position: relative; z-index: 1; }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--ivory);
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(34px, 6vw, 52px); margin-bottom: 20px; text-align: center; }
+    h2 { font-size: clamp(26px, 4vw, 38px); margin-bottom: 24px; text-align: center; }
+
+    p {
+      font-size: 16px;
+      color: var(--ivory-dim);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    .gold-divider {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 32px auto;
+      opacity: 0.7;
+    }
+
+    .glass {
+      background: var(--card);
+      border: 1px solid var(--gold-border);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #080808;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 20px 52px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      box-shadow: 0 0 32px rgba(201,168,79,0.35);
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: #dbb85a;
+      box-shadow: 0 0 48px rgba(201,168,79,0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-sub {
+      font-size: 12px;
+      color: var(--text-sec);
+      margin-top: 14px;
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+
+    .sunburst {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 24px;
+      display: block;
+      opacity: 0.5;
+      filter: drop-shadow(0 0 12px rgba(201,168,79,0.4));
+    }
+
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .check-gold {
+      color: var(--gold);
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .check-text {
+      font-size: 16px;
+      color: var(--ivory-dim);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .hero {
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--ivory-dim);
+      line-height: 1.85;
+      max-width: 540px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .mid-cta {
+      padding: 10px 0 60px;
+      text-align: center;
+    }
+
+    .feel-seen { padding: 60px 0; }
+
+    .feel-seen-close {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(20px, 3vw, 26px);
+      color: var(--gold);
+      text-align: center;
+      margin-top: 36px;
+      line-height: 1.5;
+    }
+
+    .reframe { padding: 60px 0; }
+
+    .reframe-card {
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reframe-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(180deg, var(--gold), transparent);
+    }
+
+    .modules { padding: 60px 0; }
+
+    .modules-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .module-item {
+      padding: 22px 28px;
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 18px;
+      align-items: start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(180deg, var(--gold), transparent);
+    }
+
+    .module-num {
+      font-family: var(--serif);
+      font-size: 32px;
+      color: var(--gold);
+      opacity: 0.7;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .module-title {
+      font-family: var(--serif);
+      font-size: 19px;
+      color: var(--ivory);
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+
+    .module-desc {
+      font-size: 14px;
+      color: var(--ivory-dim);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .receive { padding: 60px 0; }
+
+    .transformation { padding: 60px 0; }
+
+    .transform-card {
+      padding: 40px;
+    }
+
+    .transform-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 8px 0 28px;
+    }
+
+    .transform-item {
+      display: flex;
+      gap: 14px;
+      font-size: 16px;
+      color: var(--ivory-dim);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .transform-item .arrow { color: var(--gold); flex-shrink: 0; margin-top: 3px; }
+
+    .woman-section { padding: 60px 0; }
+
+    .woman-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 32px 0 16px;
+    }
+
+    @media (max-width: 520px) {
+      .woman-grid { grid-template-columns: 1fr; }
+    }
+
+    .woman-card {
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .woman-card.before { border-color: rgba(201,168,79,0.18); }
+    .woman-card.after { border-color: rgba(201,168,79,0.6); box-shadow: 0 0 24px rgba(201,168,79,0.1); }
+
+    .woman-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .woman-card.before .woman-label { color: var(--text-sec); }
+    .woman-card.after .woman-label { color: var(--gold); }
+
+    .woman-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .woman-list-item {
+      font-size: 14px;
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .woman-card.before .woman-list-item { color: var(--text-sec); }
+    .woman-card.before .woman-list-item::before { content: '·'; position: absolute; left: 0; color: var(--text-sec); }
+    .woman-card.after .woman-list-item { color: var(--ivory); }
+    .woman-card.after .woman-list-item::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: 10px; top: 3px; }
+
+    .woman-close {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(17px, 3vw, 21px);
+      color: var(--ivory);
+      text-align: center;
+      line-height: 1.75;
+    }
+
+    .promise { padding: 40px 0 60px; }
+
+    .promise-card {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .about { padding: 60px 0; }
+
+    .about-card { padding: 40px; }
+
+    .about-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold-border);
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .about-name {
+      font-family: var(--serif);
+      font-size: 24px;
+      color: var(--ivory);
+      margin-bottom: 4px;
+    }
+
+    .about-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .final-cta {
+      padding: 80px 0 100px;
+      text-align: center;
+    }
+
+    .price {
+      font-family: var(--serif);
+      font-size: 56px;
+      color: var(--ivory);
+      font-weight: 300;
+      margin-bottom: 6px;
+    }
+
+    .price-sub {
+      font-size: 13px;
+      color: var(--text-sec);
+      margin-bottom: 40px;
+      letter-spacing: 0.04em;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid rgba(201,168,79,0.1);
+      font-size: 11px;
+      color: rgba(184,175,164,0.25);
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+
+<nav><span class="nav-brand">The I Love Method™</span></nav>
+
+<section class="hero">
+  <div class="container">
+    <svg class="sunburst" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(40,40)" stroke="#C9A84C" stroke-width="0.7" opacity="0.8">
+        <line x1="3" y1="0" x2="35" y2="0"/><line x1="2.6" y1="1.5" x2="30.3" y2="17.5"/><line x1="2.1" y1="2.1" x2="14.1" y2="14.1"/><line x1="1.5" y1="2.6" x2="17.5" y2="30.3"/><line x1="0" y1="3" x2="0" y2="35"/><line x1="-1.5" y1="2.6" x2="-17.5" y2="30.3"/><line x1="-2.1" y1="2.1" x2="-14.1" y2="14.1"/><line x1="-2.6" y1="1.5" x2="-30.3" y2="17.5"/><line x1="-3" y1="0" x2="-35" y2="0"/><line x1="-2.6" y1="-1.5" x2="-30.3" y2="-17.5"/><line x1="-2.1" y1="-2.1" x2="-14.1" y2="-14.1"/><line x1="-1.5" y1="-2.6" x2="-17.5" y2="-30.3"/><line x1="0" y1="-3" x2="0" y2="-35"/><line x1="1.5" y1="-2.6" x2="17.5" y2="-30.3"/><line x1="2.1" y1="-2.1" x2="14.1" y2="-14.1"/><line x1="2.6" y1="-1.5" x2="30.3" y2="-17.5"/>
+      </g>
+    </svg>
+
+    <div class="eyebrow">The I Love Method™</div>
+    <h1>You've changed your thoughts. Now change what your body believes is safe.</h1>
+    <p class="hero-sub">If you've done the work but still find yourself repeating the same patterns, you're not failing — you're missing the foundation that creates lasting change.<br><br>The I Love Method™ is a 30-day somatic journey that helps you build emotional safety, train the feeling, and create transformation that your mind and body can finally hold.</p>
+  </div>
+</section>
+
+<section class="mid-cta">
+  <div class="container">
+    <a href="https://www.checkout-ds24.com/product/713770" class="btn">Start Your Transformation</a>
+    <div class="btn-sub">Instant access &nbsp;·&nbsp; 30-day guided journey &nbsp;·&nbsp; Learn at your own pace</div>
+    <div style="text-align:center;max-width:420px;margin:14px auto 0;font-size:13px;color:var(--text-sec);letter-spacing:0.02em;line-height:1.6;">
+      <strong style="color:var(--ivory-dim);">60-Day Money-Back Guarantee</strong>
+    </div>
+  </div>
+</section>
+
+<section class="feel-seen">
+  <div class="container">
+    <div class="eyebrow">Have You Ever...</div>
+
+    <div class="checklist">
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Tried affirmations, manifestation, or mindset work but still felt stuck?</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Wondered why you keep returning to the same old patterns?</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Felt like you know who you want to become — but something inside keeps pulling you back?</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Thought your nervous system or subconscious mind was blocking your progress?</div></div>
+    </div>
+
+    <div class="feel-seen-close">If so — you're exactly where this journey begins.</div>
+  </div>
+</section>
+
+<section class="reframe">
+  <div class="container">
+    <div class="glass reframe-card">
+      <div class="eyebrow" style="text-align:left;">The Big Reframe</div>
+      <h2 style="text-align:left;margin-bottom:20px;">The problem was never you.</h2>
+      <p>You've probably tried to change your thoughts, create new habits, and become a better version of yourself.</p>
+      <p>But lasting change doesn't happen by forcing yourself to think differently.</p>
+      <p>Your mind can understand something new while your body still doesn't feel safe enough to live it.</p>
+      <p>The I Love Method™ teaches you how to build the missing bridge between awareness and transformation.</p>
+      <p>Instead of fighting yourself — you learn how to work with yourself.</p>
+      <p style="color:var(--ivory);font-family:var(--serif);font-style:italic;font-size:19px;margin-bottom:0;">That changes everything.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:60px 0;">
+  <div class="container">
+    <div class="eyebrow">What Makes This Different</div>
+    <h2>Instead of forcing change...<br>you'll learn how to:</h2>
+
+    <div class="checklist">
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Understand what your resistance is actually trying to protect.</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Work with your subconscious patterns instead of fighting them.</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Train your body to feel safe with a new way of being.</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Create change from the inside out.</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Build lasting transformation through love rather than pressure.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="modules">
+  <div class="container">
+    <div class="eyebrow">What Happens During the 30 Days</div>
+    <h2>6 modules. 30 days.<br>One foundation for lasting change.</h2>
+
+    <div class="modules-list">
+      <div class="glass module-item">
+        <div class="module-num">1</div>
+        <div>
+          <div class="module-title">The Foundation</div>
+          <div class="module-desc">Understand why change feels difficult, why old patterns return, and discover the foundation needed for transformation. Days 1–3.</div>
+        </div>
+      </div>
+      <div class="glass module-item">
+        <div class="module-num">2</div>
+        <div>
+          <div class="module-title">Discovering Your Resistance</div>
+          <div class="module-desc">Identify the pattern you want to change and understand what your resistance has been trying to communicate. Days 4–7.</div>
+        </div>
+      </div>
+      <div class="glass module-item">
+        <div class="module-num">3</div>
+        <div>
+          <div class="module-title">The I Love Method</div>
+          <div class="module-desc">Learn the Bridge of Safety, the redirect, and how to train a new emotional state your body can trust. Days 8–14.</div>
+        </div>
+      </div>
+      <div class="glass module-item">
+        <div class="module-num">4</div>
+        <div>
+          <div class="module-title">The Daily Practice Protocol</div>
+          <div class="module-desc">Create a daily practice using awareness, reflection, and emotional training to integrate your transformation. Days 15–21.</div>
+        </div>
+      </div>
+      <div class="glass module-item">
+        <div class="module-num">5</div>
+        <div>
+          <div class="module-title">Navigating Resistance & Milestones</div>
+          <div class="module-desc">Recognize evidence of change, work through challenges, and strengthen your new foundation. Days 22–25.</div>
+        </div>
+      </div>
+      <div class="glass module-item">
+        <div class="module-num">6</div>
+        <div>
+          <div class="module-title">Expansion & Mastery</div>
+          <div class="module-desc">Integrate your new way of being and learn how to continue using the method for every new chapter of life. Days 26–30.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:60px 0;">
+  <div class="container">
+    <div class="eyebrow">This Is For You If...</div>
+    <h2>You're ready for real change.</h2>
+
+    <div class="checklist">
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">You're tired of repeating the same patterns.</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">You've done personal growth work but still feel something is missing.</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">You want to understand yourself instead of judging yourself.</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">You're ready to create change through love rather than force.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="receive">
+  <div class="container">
+    <div class="eyebrow">What You Receive</div>
+    <h2>Everything you need to<br>build your foundation.</h2>
+
+    <div class="checklist">
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">30 guided daily lessons</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Practical journaling exercises</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Daily emotional training practice</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Reflection pages</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Lifetime access</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Learn at your own pace</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="mid-cta">
+  <div class="container">
+    <a href="https://www.checkout-ds24.com/product/713770" class="btn">Start Your Transformation</a>
+    <div class="btn-sub">Instant access &nbsp;·&nbsp; 30-day guided journey &nbsp;·&nbsp; Learn at your own pace</div>
+  </div>
+</section>
+
+<section class="transformation">
+  <div class="container">
+    <div class="eyebrow">The Transformation</div>
+    <h2>Imagine finishing these 30 days...</h2>
+
+    <div class="glass transform-card">
+      <div class="transform-list">
+        <div class="transform-item"><span class="arrow">→</span><span>Understanding why you keep returning to old patterns.</span></div>
+        <div class="transform-item"><span class="arrow">→</span><span>Knowing how to work with resistance instead of fighting it.</span></div>
+        <div class="transform-item"><span class="arrow">→</span><span>Feeling your body respond differently to change.</span></div>
+        <div class="transform-item"><span class="arrow">→</span><span>Having a foundation you can return to every time you want to grow.</span></div>
+      </div>
+      <div class="gold-divider" style="margin:24px 0;"></div>
+      <p style="font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ivory);text-align:center;margin-bottom:0;line-height:1.7;">Not because your life became perfect.<br>But because your relationship with yourself changed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="woman-section">
+  <div class="container">
+    <div class="eyebrow">The Journey</div>
+    <h2>Who you are becoming.</h2>
+
+    <div class="woman-grid">
+      <div class="glass woman-card before">
+        <div class="woman-label">The person who begins</div>
+        <div class="woman-list">
+          <div class="woman-list-item">questions themselves.</div>
+          <div class="woman-list-item">feels stuck in old patterns.</div>
+          <div class="woman-list-item">tries harder but keeps returning to the same place.</div>
+        </div>
+      </div>
+      <div class="glass woman-card after">
+        <div class="woman-label">The person who finishes</div>
+        <div class="woman-list">
+          <div class="woman-list-item">understands themselves.</div>
+          <div class="woman-list-item">knows how to meet resistance with compassion.</div>
+          <div class="woman-list-item">feels safe creating change.</div>
+          <div class="woman-list-item">has a method they can use for life.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass" style="padding:32px;margin-top:4px;">
+      <p class="woman-close">They are not different because someone fixed them.<br>They are different because they finally learned how to work with themselves instead of against themselves.</p>
+    </div>
+  </div>
+</section>
+
+<section class="promise">
+  <div class="container">
+    <div class="glass promise-card">
+      <div class="eyebrow">The Promise</div>
+      <p style="font-family:var(--serif);font-style:italic;font-size:clamp(18px,3vw,24px);color:var(--ivory);text-align:center;line-height:1.75;margin-bottom:0;">You won't leave this course trying to become someone else.<br>You'll leave with the foundation to become who you've always known you could be.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="eyebrow">The Creator</div>
+    <h2>Built from lived experience.<br>Not theory.</h2>
+
+    <div class="glass about-card">
+      <img src="galit-profile.jpg" alt="Galit" class="about-photo">
+      <div class="about-name">Galit</div>
+      <div class="about-title">Creator of The I Love Method™</div>
+      <p>I wasn't new to personal growth.</p>
+      <p>I spent years meditating, attending Vipassana retreats, studying, and doing the inner work.</p>
+      <p>I was changing.</p>
+      <p>But every time I tried to create a new belief or identity, something inside still resisted.</p>
+      <p>I couldn't understand why the work wasn't lasting.</p>
+      <p>Until I discovered the missing piece: <em style="color:var(--ivory);">the problem wasn't me.</em></p>
+      <p>I was missing the foundation that allows change to become safe.</p>
+      <p>When I found that foundation, everything shifted.</p>
+      <p style="color:var(--gold);font-family:var(--serif);font-style:italic;font-size:18px;margin-bottom:0;">The I Love Method™ is that foundation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mid-cta">
+  <div class="container">
+    <a href="https://www.checkout-ds24.com/product/713770" class="btn">Start Your Transformation</a>
+    <div class="btn-sub">Instant access &nbsp;·&nbsp; 30-day guided journey &nbsp;·&nbsp; Learn at your own pace</div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <svg class="sunburst" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(40,40)" stroke="#C9A84C" stroke-width="0.7" opacity="0.6">
+        <line x1="3" y1="0" x2="35" y2="0"/><line x1="2.6" y1="1.5" x2="30.3" y2="17.5"/><line x1="2.1" y1="2.1" x2="14.1" y2="14.1"/><line x1="1.5" y1="2.6" x2="17.5" y2="30.3"/><line x1="0" y1="3" x2="0" y2="35"/><line x1="-1.5" y1="2.6" x2="-17.5" y2="30.3"/><line x1="-2.1" y1="2.1" x2="-14.1" y2="14.1"/><line x1="-2.6" y1="1.5" x2="-30.3" y2="17.5"/><line x1="-3" y1="0" x2="-35" y2="0"/><line x1="-2.6" y1="-1.5" x2="-30.3" y2="-17.5"/><line x1="-2.1" y1="-2.1" x2="-14.1" y2="-14.1"/><line x1="-1.5" y1="-2.6" x2="-17.5" y2="-30.3"/><line x1="0" y1="-3" x2="0" y2="-35"/><line x1="1.5" y1="-2.6" x2="17.5" y2="-30.3"/><line x1="2.1" y1="-2.1" x2="14.1" y2="-14.1"/><line x1="2.6" y1="-1.5" x2="30.3" y2="-17.5"/>
+      </g>
+    </svg>
+
+    <div class="eyebrow">The Founding Round</div>
+    <h2 style="margin-bottom:16px;">Your transformation doesn't begin<br>when you finally believe.</h2>
+    <p style="text-align:center;max-width:480px;margin:0 auto 40px;">It begins when your body feels safe enough to change.</p>
+
+    <div class="price">$198</div>
+    <div class="price-sub">One-time payment &nbsp;·&nbsp; Full access</div>
+
+    <a href="https://www.checkout-ds24.com/product/713770" class="btn">Start Your Transformation</a>
+    <div class="btn-sub">Instant access &nbsp;·&nbsp; 30-day guided journey &nbsp;·&nbsp; Learn at your own pace</div>
+    <div style="text-align:center;max-width:420px;margin:20px auto 0;font-size:13px;color:var(--text-sec);letter-spacing:0.02em;line-height:1.6;">
+      <strong style="color:var(--ivory-dim);">60-Day Money-Back Guarantee</strong> — If you're not satisfied, request a full refund within 60 days of purchase.
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 The I Love Method™ &nbsp;·&nbsp; All rights reserved
+
+  <!-- Begin of Digistore24 Trusted Badge Code -->
+  <script type="text/javascript" src="https://www.digistore24.com/trusted-badge/46879/1ublYZNKf4OZftr/salespage"></script>
+  <!-- End of Digistore24 Trusted Badge Code -->
+</footer>
+
+</body>
+</html>
