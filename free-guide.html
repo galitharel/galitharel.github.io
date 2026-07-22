@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When The Old Pattern Shows Up — Free Guide | The I Love Method™</title>
+  <meta name="description" content="Why you keep repeating the same thoughts, feelings, and reactions — and what you can do differently. Get the free guide.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg: #050505;
+      --ivory: #F4EFE7;
+      --ivory-dim: #C8BFB6;
+      --gold: #C9A84F;
+      --gold-border: rgba(201,168,79,0.45);
+      --card: rgba(18,15,10,0.72);
+      --text-sec: #8B8275;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      background-image: url('bokeh.png');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+      color: var(--ivory);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.52);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1;
+      background: rgba(5,4,2,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201,168,79,0.15);
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    section { position: relative; z-index: 1; }
+
+    .container {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--ivory);
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(32px, 5.5vw, 48px); margin-bottom: 20px; text-align: center; }
+    h2 { font-size: clamp(24px, 4vw, 32px); margin-bottom: 24px; text-align: center; }
+
+    .subhead {
+      font-size: 18px;
+      color: var(--ivory-dim);
+      line-height: 1.7;
+      font-weight: 300;
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
+
+    p { font-size: 16px; color: var(--ivory-dim); line-height: 1.8; font-weight: 300; margin-bottom: 16px; }
+
+    .quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(19px, 3vw, 23px);
+      color: var(--ivory);
+      text-align: center;
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .gold-divider {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 32px auto;
+      opacity: 0.7;
+    }
+
+    .glass {
+      background: var(--card);
+      border: 1px solid var(--gold-border);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #080808;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 20px 48px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      box-shadow: 0 0 32px rgba(201,168,79,0.35);
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #dbb85a;
+      box-shadow: 0 0 48px rgba(201,168,79,0.5);
+      transform: translateY(-2px);
+    }
+
+    .sunburst {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 24px;
+      display: block;
+      opacity: 0.55;
+      filter: drop-shadow(0 0 12px rgba(201,168,79,0.4));
+    }
+
+    .hero { padding: 130px 0 60px; text-align: center; }
+    .btn-row { text-align: center; margin-top: 8px; }
+
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 28px auto;
+      max-width: 460px;
+      text-align: left;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .check-gold {
+      color: var(--gold);
+      font-size: 15px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .check-text {
+      font-size: 16px;
+      color: var(--ivory-dim);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .spark-item .check-gold { font-size: 14px; }
+
+    /* Email capture */
+    .capture { padding: 20px 0 70px; }
+
+    .capture-card { padding: 40px; }
+
+    .capture h2 { font-size: clamp(21px, 3.5vw, 26px); margin-bottom: 8px; }
+
+    .capture-sub {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-sec);
+      margin-bottom: 28px;
+    }
+
+    form { display: flex; flex-direction: column; gap: 14px; }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--gold-border);
+      border-radius: 100px;
+      padding: 16px 22px;
+      font-family: var(--sans);
+      font-size: 15px;
+      color: var(--ivory);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]::placeholder, input[type="email"]::placeholder {
+      color: var(--text-sec);
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus {
+      border-color: var(--gold);
+    }
+
+    form .btn { width: 100%; margin-top: 6px; }
+
+    .form-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-sec);
+      line-height: 1.6;
+      margin-top: 16px;
+    }
+
+    .why { padding: 60px 0; }
+
+    .inside { padding: 60px 0; }
+
+    .spark-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 28px auto 0;
+      max-width: 480px;
+      text-align: left;
+    }
+
+    .final-cta { padding: 70px 0 100px; text-align: center; }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 32px 24px 40px;
+      border-top: 1px solid rgba(201,168,79,0.1);
+      font-size: 11px;
+      color: rgba(184,175,164,0.4);
+      letter-spacing: 0.04em;
+    }
+
+    footer a { color: rgba(184,175,164,0.6); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav><a href="/" class="nav-brand" style="text-decoration:none;">The I Love Method™</a></nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <svg class="sunburst" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(40,40)" stroke="#C9A84C" stroke-width="0.7" opacity="0.8">
+        <line x1="3" y1="0" x2="35" y2="0"/><line x1="2.6" y1="1.5" x2="30.3" y2="17.5"/><line x1="2.1" y1="2.1" x2="14.1" y2="14.1"/><line x1="1.5" y1="2.6" x2="17.5" y2="30.3"/><line x1="0" y1="3" x2="0" y2="35"/><line x1="-1.5" y1="2.6" x2="-17.5" y2="30.3"/><line x1="-2.1" y1="2.1" x2="-14.1" y2="14.1"/><line x1="-2.6" y1="1.5" x2="-30.3" y2="17.5"/><line x1="-3" y1="0" x2="-35" y2="0"/><line x1="-2.6" y1="-1.5" x2="-30.3" y2="-17.5"/><line x1="-2.1" y1="-2.1" x2="-14.1" y2="-14.1"/><line x1="-1.5" y1="-2.6" x2="-17.5" y2="-30.3"/><line x1="0" y1="-3" x2="0" y2="-35"/><line x1="1.5" y1="-2.6" x2="17.5" y2="-30.3"/><line x1="2.1" y1="-2.1" x2="14.1" y2="-14.1"/><line x1="2.6" y1="-1.5" x2="30.3" y2="-17.5"/>
+      </g>
+    </svg>
+
+    <div class="eyebrow">Free Guide</div>
+    <h1>When The Old Pattern<br>Shows Up</h1>
+    <p class="subhead">Why you keep repeating the same patterns —<br>and what you can do differently.</p>
+
+    <p class="quote">"I know I want to change…<br>so why do I keep ending up here again?"</p>
+    <p style="text-align:center;color:var(--ivory-dim);margin-bottom:32px;">You're not the only one.</p>
+
+    <p style="text-align:center;color:var(--ivory-dim);margin-bottom:8px;">This free guide will help you understand:</p>
+    <div class="checklist">
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Why the same patterns keep coming back</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">Why knowing what to do is sometimes not enough</div></div>
+      <div class="check-item"><div class="check-gold">✓</div><div class="check-text">How to start creating a different response</div></div>
+    </div>
+
+    <p style="text-align:center;color:var(--ivory-dim);margin:24px 0 28px;">Start understanding what's really happening inside you.</p>
+
+    <div class="btn-row">
+      <a href="#get-guide" class="btn">Get My Free Guide</a>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<section class="capture" id="get-guide">
+  <div class="container">
+    <div class="glass capture-card">
+      <h2>Where should we send your guide?</h2>
+      <p class="capture-sub">Enter your details below and it'll land straight in your inbox.</p>
+
+      <!-- Connected to your Kit form: "Free Guide - When The Old Pattern Shows Up" -->
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.kit.com/forms/9713686/subscriptions" method="post">
+        <input type="text" name="fields[first_name]" placeholder="First name" required>
+        <input type="email" name="email_address" placeholder="Email address" required>
+        <button type="submit" class="btn">Send Me My Free Guide</button>
+      </form>
+
+      <p class="form-note">Your guide will arrive in your inbox shortly. You'll also receive occasional insights and resources from The I Love Method™.<br>You can unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY THIS GUIDE -->
+<section class="why">
+  <div class="container">
+    <div class="eyebrow">Why This Guide</div>
+    <h2>You don't need more advice.<br>You need a deeper<br>understanding of yourself.</h2>
+
+    <p style="text-align:center;">Many people know what they want to change.<br>They know the habits, the thoughts, the life they want.</p>
+
+    <p style="text-align:center;font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ivory);margin:24px 0;">And still…</p>
+
+    <p style="text-align:center;">The same reactions appear.<br>The same doubts return.<br>The same patterns repeat.</p>
+
+    <p style="text-align:center;margin-top:24px;">This guide shows you why —<br>and the first step toward something different.</p>
+  </div>
+</section>
+
+<!-- INSIDE THE GUIDE -->
+<section class="inside">
+  <div class="container">
+    <div class="eyebrow">Inside The Guide</div>
+    <h2>You'll discover:</h2>
+
+    <div class="spark-list">
+      <div class="check-item spark-item"><div class="check-gold">✓</div><div class="check-text">Why old patterns return even when you truly want change</div></div>
+      <div class="check-item spark-item"><div class="check-gold">✓</div><div class="check-text">Why you can understand something logically but still feel stuck emotionally</div></div>
+      <div class="check-item spark-item"><div class="check-gold">✓</div><div class="check-text">How to stop fighting yourself and start responding differently</div></div>
+      <div class="check-item spark-item"><div class="check-gold">✓</div><div class="check-text">A simple reflection exercise to create more clarity</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <svg class="sunburst" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(40,40)" stroke="#C9A84C" stroke-width="0.7" opacity="0.6">
+        <line x1="3" y1="0" x2="35" y2="0"/><line x1="2.6" y1="1.5" x2="30.3" y2="17.5"/><line x1="2.1" y1="2.1" x2="14.1" y2="14.1"/><line x1="1.5" y1="2.6" x2="17.5" y2="30.3"/><line x1="0" y1="3" x2="0" y2="35"/><line x1="-1.5" y1="2.6" x2="-17.5" y2="30.3"/><line x1="-2.1" y1="2.1" x2="-14.1" y2="14.1"/><line x1="-2.6" y1="1.5" x2="-30.3" y2="17.5"/><line x1="-3" y1="0" x2="-35" y2="0"/><line x1="-2.6" y1="-1.5" x2="-30.3" y2="-17.5"/><line x1="-2.1" y1="-2.1" x2="-14.1" y2="-14.1"/><line x1="-1.5" y1="-2.6" x2="-17.5" y2="-30.3"/><line x1="0" y1="-3" x2="0" y2="-35"/><line x1="1.5" y1="-2.6" x2="17.5" y2="-30.3"/><line x1="2.1" y1="-2.1" x2="14.1" y2="-14.1"/><line x1="2.6" y1="-1.5" x2="30.3" y2="-17.5"/>
+      </g>
+    </svg>
+
+    <div class="eyebrow">Free Guide</div>
+    <h2 style="margin-bottom:8px;">Ready to understand<br>yourself differently?</h2>
+    <p style="text-align:center;max-width:440px;margin:0 auto 8px;">Get your free guide:</p>
+    <p class="quote" style="margin-bottom:36px;">When The Old Pattern Shows Up</p>
+
+    <a href="#get-guide" class="btn">Get My Free Guide</a>
+  </div>
+</section>
+
+<footer>© 2025 The I Love Method™ &nbsp;·&nbsp; All rights reserved</footer>
+
+</body>
+</html>
