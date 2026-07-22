@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imprint / Legal Notice — The I Love Method™</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg: #050505;
+      --ivory: #F4EFE7;
+      --ivory-dim: #C8BFB6;
+      --gold: #C9A84F;
+      --gold-border: rgba(201,168,79,0.45);
+      --card: rgba(18,15,10,0.72);
+      --text-sec: #8B8275;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ivory);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1;
+      background: rgba(5,4,2,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201,168,79,0.15);
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-brand {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--ivory);
+      line-height: 1.2;
+      font-size: clamp(30px, 5vw, 42px);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--gold);
+      font-size: 19px;
+      margin: 0 0 8px;
+    }
+
+    .hero {
+      padding: 130px 0 40px;
+      text-align: center;
+    }
+
+    .glass {
+      background: var(--card);
+      border: 1px solid var(--gold-border);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 40px;
+    }
+
+    .block {
+      margin-bottom: 28px;
+    }
+
+    .block:last-child { margin-bottom: 0; }
+
+    .block p {
+      font-size: 15px;
+      color: var(--ivory-dim);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .block a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-border);
+    }
+
+    .gold-divider {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 32px auto;
+      opacity: 0.7;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 40px 24px 60px;
+      font-size: 11px;
+      color: rgba(184,175,164,0.4);
+      letter-spacing: 0.04em;
+    }
+
+    footer a {
+      color: rgba(184,175,164,0.6);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<nav><a href="/" class="nav-brand">The I Love Method™</a></nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Legal</div>
+    <h1>Imprint / Legal Notice</h1>
+
+    <div class="glass">
+      <div class="block">
+        <h2>Company</h2>
+        <p>
+          Faith St.<br>
+          Société par actions simplifiée (SAS)<br>
+          420 Chemin des Cambreniers<br>
+          06140 Vence, France
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:contact@theilovemethod.com">contact@theilovemethod.com</a><br>
+          Phone: +33 6 52 26 64 14
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Commercial Register</h2>
+        <p>
+          RCS Grasse, No. 978 793 131<br>
+          Registered with: Greffe du Tribunal de Commerce de Grasse
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>VAT ID</h2>
+        <p>FR61978793131</p>
+      </div>
+
+      <div class="block">
+        <h2>Legal Representative</h2>
+        <p>President: Galit Harel</p>
+      </div>
+
+      <div class="block">
+        <h2>Responsible for Content</h2>
+        <p>Galit Harel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 The I Love Method™ &nbsp;·&nbsp; All rights reserved<br>
+Questions? Contact us at <a href="mailto:contact@theilovemethod.com">contact@theilovemethod.com</a></footer>
+
+</body>
+</html>
