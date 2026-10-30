@@ -45,6 +45,7 @@
     + '<div class="footer-col"><h4>Legal</h4>'
     + '<a href="/terms.html">Terms &amp; Conditions</a>'
     + '<a href="/privacy.html">Privacy Policy</a>'
+    + '<a href="/delete-data">Delete Your Data</a>'
     + '<a href="/refund.html">Refund Policy</a>'
     + '<a href="/disclaimer.html">Disclaimer</a>'
     + '<a href="/imprint.html">Imprint</a>'
